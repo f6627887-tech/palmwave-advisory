@@ -1,0 +1,17 @@
+{
+  "name": "palmwave-advisory",
+  "version": "1.0.0",
+  "description": "Palm Wave Advisory — منصة وطنية ذكية لتطوير وإدارة الوجهات الساحلية في السعودية",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^5.0.7"
+  }
+}
