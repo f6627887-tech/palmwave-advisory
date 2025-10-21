@@ -2,47 +2,129 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Palm Wave Advisory</title>
+  <meta name="description" content="منصّة وطنية ذكية لتطوير وإدارة الوجهات الساحلية السعودية بطريقة مستدامة وذكية ضمن رؤية 2030.">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to bottom right, #e8f6fb, #b2f7ef);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #0a7d8c;
-      text-align: center;
+    :root{
+      --teal:#0a7d8c;        /* تركوازي أساسي */
+      --teal-ink:#0a5460;    /* غامق */
+      --sky:#e8f6fb;         /* سماوي فاتح */
+      --sand:#f4f6f4;        /* رملي */
+      --ink:#2b3a3a;         /* نص */
+      --gold:#b9933b;        /* لمسات */
     }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Cairo","Tajawal",Segoe UI,Roboto,sans-serif;background:linear-gradient(160deg,var(--sky),#c9f2ee);}
+    a{color:inherit;text-decoration:none}
+    /* Nav */
+    .nav{
+      position:sticky;top:0;z-index:10;background:#fff8;backdrop-filter:blur(8px);
+      display:flex;align-items:center;justify-content:center;border-bottom:1px solid #00000010
     }
-    p {
-      font-size: 20px;
-      color: #333;
-      max-width: 400px;
-      line-height: 1.7;
-    }
-    .logo {
-      font-size: 60px;
-      margin-bottom: 15px;
-    }
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 14px;
-      color: #555;
-    }
+    .nav-inner{width:min(1100px,92vw);display:flex;align-items:center;gap:18px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--teal)}
+    .brand img{width:40px;height:40px;object-fit:contain;border-radius:8px}
+    .nav a.btn{margin-inline-start:auto;background:var(--teal);color:#fff;padding:10px 16px;border-radius:10px}
+    /* Hero */
+    .hero{width:min(1100px,92vw);margin:42px auto 0;display:grid;gap:18px;place-items:center;text-align:center}
+    .hero h1{margin:8px 0 6px;font-size:34px;color:var(--teal);letter-spacing:.2px}
+    .hero p{margin:0;color:var(--ink);line-height:1.9;font-size:18px}
+    .hero .cta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+    .btn{background:var(--teal);color:#fff;border:0;padding:12px 18px;border-radius:12px;cursor:pointer}
+    .btn.ghost{background:#fff;color:var(--teal);border:1px solid #0a7d8c33}
+    /* Sections */
+    section{width:min(1100px,92vw);margin:54px auto;background:#fff;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.06)}
+    h2{margin:0 0 12px;color:var(--teal-ink);font-size:24px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .card{background:var(--sand);border:1px solid #0000000e;border-radius:14px;padding:16px;text-align:start}
+    .card h3{margin:0 0 6px;color:var(--teal)}
+    .muted{color:#4b5b5b}
+    /* Footer */
+    footer{margin:50px 0 24px;text-align:center;color:#567}
   </style>
 </head>
 <body>
-  <div class="logo">🌴🌊</div>
-  <h1>Palm Wave Advisory</h1>
-  <p>نطور السواحل السعودية بطريقة مبتكرة ومستدامة تجمع بين الهوية المحلية والطابع البيئي والتجاري، بما يتماشى مع رؤية المملكة 2030.</p>
-  <footer>© 2025 Palm Wave Advisory</footer>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <img src="/logo.png" alt="Palm Wave logo" onerror="this.style.display='none'">
+        <span>Palm Wave Advisory</span>
+      </div>
+      <a class="btn" href="#contact">تواصل معنا</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="/logo.png" alt="" style="width:80px;height:80px;object-fit:contain;border-radius:16px" onerror="this.style.display='none'">
+    <h1>منصّة ذكية لتنمية السواحل السعودية 🌴🌊</h1>
+    <p>
+      نجمع بيانات السواحل، نحلّل رضا الزوار واحتياجات الوجهات، ونربط الجهات الحكومية
+      بالمستثمرين والمستشارين لتحقيق تنمية متكاملة ضمن رؤية 2030.
+    </p>
+    <div class="cta">
+      <a class="btn" href="#services">استكشف الخدمات</a>
+      <a class="btn ghost" href="#models">النماذج الجاهزة</a>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>الخدمات</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>شارات تطوير سواحل ذكية ومستدامة</h3>
+        <p class="muted">معايير تقييم واعتماد للوجهات الساحلية (ذكاء، استدامة، تجربة). لوحات متابعة لحالة الالتزام والتحسين.</p>
+      </div>
+      <div class="card">
+        <h3>تحليلات ذكية لرضا الزوار</h3>
+        <p class="muted">لوحات مؤشرات مباشرة من الاستبيانات والميدان: النظافة، الازدحام، المسارات، المرافق، الخدمات التجارية.</p>
+      </div>
+      <div class="card">
+        <h3>توظيف مستشارين متخصصين</h3>
+        <p class="muted">شبكة خبراء في التقنية، البنية التحتية، البيئة البحرية، التشغيل السياحي؛ طلبات وترسية عبر المنصة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELS -->
+  <section id="models">
+    <h2>نماذج تطوير جاهزة</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>البيت الزجاجي</h3>
+        <p class="muted">مراكز عرض بيئية وتعليمية مطلة على البحر مع استهلاك طاقة منخفض.</p>
+      </div>
+      <div class="card">
+        <h3>النخلة الذكية</h3>
+        <p class="muted">جلسات تظليل بشواحن وهوائي واي فاي وكاميرات بيئية لقياس الجودة.</p>
+      </div>
+      <div class="card">
+        <h3>محطات إعادة تدوير المياه</h3>
+        <p class="muted">حلول لمعالجة مياه الغسيل والري للمسطحات الخضراء على الشواطئ.</p>
+      </div>
+      <div class="card">
+        <h3>الممشى الذكي</h3>
+        <p class="muted">مسارات مريحة مزوّدة بإضاءة شمسية وعدّادات حركة وخرائط تفاعلية.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>شاركنا اقتراحاتك وطلباتك</h2>
+    <p class="muted">للمستثمرين، الزوار، والجهات الحكومية — نسعد باستقبال المقترحات والتعاون.</p>
+    <div class="cta" style="justify-content:flex-start">
+      <!-- غيّري رابط الفورم هنا -->
+      <a class="btn" href="https://forms.gle/your-form-link" target="_blank">فتح الاستبيان</a>
+      <a class="btn ghost" href="mailto:info@palmwave.sa">مراسلة عبر البريد</a>
+      <a class="btn ghost" href="https://wa.me/9665XXXXXXXX" target="_blank">واتساب</a>
+    </div>
+  </section>
+
+  <footer>© 2025 Palm Wave Advisory — جميع الحقوق محفوظة</footer>
 </body>
 </html>
